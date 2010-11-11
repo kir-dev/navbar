@@ -1,10 +1,10 @@
 /* 
 	******************************************************
-		Name: vir-navbar-3.2.js
+		Name: vir-navbar-3.2.1.js
 		Description: 
 			Navbar creator javascript for 
 			(v3) VIR navigation bar
-		Release-date: 2009-08-29
+		Release-date: 2010-11-11
 	******************************************************
 */
 
@@ -98,10 +98,9 @@ function printNavbar(parameters) {
 					loginUrl: 'https://kir-dev.sch.bme.hu/wp-login.php',
 					domain: 'kir-dev.sch.bme.hu'
 				},{
-					title: 'könyvtár',
-					url: 'http://konyvtar.sch.bme.hu/',
-					loginUrl: 'https://konyvtar.sch.bme.hu/sso-login.php?return=http://konyvtar.sch.bme.hu/',
-					domain: 'konyvtar.sch.bme.hu'
+					title: 'bss',
+					url: 'http://bss.sch.bme.hu/',
+					domain: 'bss.sch.bme.hu'
 				},{
 					title: 'bbk',
 					url: 'http://bbk.sch.bme.hu/',
