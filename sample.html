@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="vir-navbar3.js"></script>
+	</head>
+	<body style="background-color:#eedddd;padding:20px;">
+		<div id="navbar"></div>
+		<script type="text/javascript">
+			var navbarConf = {
+				logoutLink: 'http://blog.sch.bme.hu/htsrv/login.php?action=logout', // loginLink, vagy logoutLink kell (vagy mindkettő, és a loggedIn mutatja meg, be van-e lépve)
+				theme: 'orange', // téma neve
+				width: 850, // szélesség, opcionális
+				container: 'navbar' // konténer html elem, opcionális
+			};
+			printNavbar(navbarConf);
+		</script>
+		
+		<div id="page" style="margin:20px;">
+			<h1>Ide jön a cím</h1>
+			<p>Ide jön a content...</p>
+			<p>A navbar használatához, beintagrálásához lásd: <a href="http://kir-dev.sch.bme.hu/redmine/wiki/kir-dev/Navbar3">http://kir-dev.sch.bme.hu/redmine/wiki/kir-dev/Navbar3</a></p>
+		</div>
+		
+	</body>
+</html>

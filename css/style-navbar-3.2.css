@@ -1,0 +1,244 @@
+/* 
+	******************************************************
+		Name: style-navbar3-merged.css
+		Description: 
+			style for new (v3) VIR navigation bar
+		Release-date: 
+			v3		: 2009-03-02
+			v3.2	: 2009-09-02
+		Compatible: 
+			FF2, FF3, IE7, Opera 9.63, Chrome 1.0, Safari 4
+	******************************************************
+*/
+/* -------------------------------------- COMMON part --------------------------------- */
+/* reset */
+#navbar3 * {
+	margin: 0;
+	padding: 0;
+	border: none;
+	float: none;
+}
+/* navbar container div */
+#navbar3 {
+	position: absolute;
+	z-index: 1000;
+	text-align:left;
+}
+#navbar3, #navbar3 a, #navbar3 a:hover, #navbar3 a:active, #navbar3 a:visited, #navbar3 span {
+	color: #ffffff;
+	text-decoration: none;
+	border: none;
+	font: bold 13px verdana,sans-serif;
+}
+#navbar3 a:hover, #navbar3 span:hover, #navbar3 li:hover > a, #navbar3 li:hover > span {
+	color: #fffde0;
+}
+/* each listitem */
+#navbar3-menu li { list-style: none; }
+/* first level menu items */
+#navbar3-menu > li {
+	display: block;
+	height: 18px;
+	padding: 3px 2px;
+	float: left;
+	position:relative;
+}
+/* general submenu-arrows */
+#navbar3 .arrow {
+	visibility: inherit;
+	float:right;
+	width: 12px;
+	height: 16px;
+}
+/* second level menu (submenu) */
+#navbar3-menu > li ul {
+	opacity: 0.92;
+	visibility: hidden;
+	margin: 0 -3px;
+	position: absolute;
+	z-index: 1001;
+}
+#navbar3.navbar_blue #navbar3-menu > li ul {
+	background: #305f84;
+	border: 1px solid #295070;
+}
+#navbar3.navbar_red #navbar3-menu > li ul {
+	background: #9c383b;
+	border: 1px solid #86282a;
+}
+#navbar3.navbar_black #navbar3-menu > li ul {
+	background: #4b4c4c;
+	border: 1px solid #242424;
+}
+#navbar3.navbar_grey #navbar3-menu > li ul {
+	background: #707172;
+	border: 1px solid #3c3c3c;
+}
+#navbar3.navbar_green #navbar3-menu > li ul {
+	background: #409442;
+	border: 1px solid #24652c;
+}
+#navbar3.navbar_orange #navbar3-menu > li ul {
+	background: #de700f;
+	border: 1px solid #973200;
+}
+/* display the submenu */
+#navbar3-menu > li:hover ul { visibility: visible; }
+/* one menupoint in the submenu */
+#navbar3-menu > li li { padding: 2px 4px; }
+/* submenu hover */
+#navbar3.navbar_blue #navbar3-menu ul li:hover, #navbar3.navbar_blue #navbar3-menu ul li.actual { background: #4a7ea1; }
+#navbar3.navbar_red #navbar3-menu ul li:hover, #navbar3.navbar_red #navbar3-menu ul li.actual { background: #b84648; }
+#navbar3.navbar_black #navbar3-menu ul li:hover, #navbar3.navbar_black #navbar3-menu ul li.actual { background: #585959; }
+#navbar3.navbar_grey #navbar3-menu ul li:hover, #navbar3.navbar_grey #navbar3-menu ul li.actual { background: #848586; }
+#navbar3.navbar_green #navbar3-menu ul li:hover, #navbar3.navbar_green #navbar3-menu ul li.actual { background: #4bae4e; }
+#navbar3.navbar_orange #navbar3-menu ul li:hover, #navbar3.navbar_orange #navbar3-menu ul li.actual { background: #ff8412; }
+/* non-clickable menuitems */
+#navbar3-menu > li > span { cursor: default; }
+/* create place for icons - default */
+#navbar3-menu > li > a, #navbar3-menu > li > span {
+	padding: 0 3px 0 17px;
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+}
+#navbar3-menu ul > li {
+	height:16px;
+}
+#navbar3-menu ul > li > a {
+	display:block;
+}
+/* icons */
+.icon-profil { background-image: url('../images/navbar3/profil-logo.png'); font-size:13px; }
+.icon-news { background-image: url('../images/navbar3/news-logo.png'); font-size:13px; }
+.icon-korok { background-image: url('../images/navbar3/korok-logo.png'); font-size:13px; }
+.icon-login { background-image: url('../images/navbar3/login-logo.png'); font-size:13px; }
+.icon-logout { background-image: url('../images/navbar3/logout-logo.png'); font-size:13px; }
+.icon-community { background-image: url('../images/navbar3/community-logo.png'); font-size:13px; }
+.icon-services { background-image: url('../images/navbar3/services-logo.png'); font-size:13px; }
+.icon-other { background-image: url('../images/navbar3/other-logo.png'); font-size:13px; }
+.icon-sso { background-image: url('../images/navbar3/sso-logo.png'); font-size:13px; }
+.icon-app { background-image: url('../images/navbar3/app2-logo.png'); font-size:13px; }
+/* menuitems without icon */
+#navbar3-menu .noicon { padding: 0; }
+/* login menu */
+#navbar3-menu .float_right {
+	float: right;
+	direction: rtl;
+	margin: 0;
+}
+#navbar3-menu .float_right > span {
+	direction:ltr;
+}
+#navbar3-menu .float_right > ul > li {
+	direction:ltr;
+}
+#navbar3-menu .float_right > a {
+	direction:ltr;
+}
+/* lock icon in submenu */
+#navbar3 a.lock {
+	display: block;
+	width: 20px;
+	height: 16px;
+	background: url('../images/navbar3/lock2.png') 4px 2px no-repeat;
+	float: right;
+}
+#navbar3 .float_right a.lock {
+	float: left;
+}
+#navbar3 a.lock:hover {
+	background-position: -26px 2px;
+}
+#navbar3 .nbmenu_separator {
+	padding-top:9px;
+	text-align:center;
+	height:9px;
+}
+#navbar3 .nbmenu_separator hr {
+	width:80%;
+	color:white;
+	height:1px;
+	border:1px solid white;
+}
+/* --------------------------------------  WIDE part  --------------------------------- */
+/* navbar fullwidth container div */
+#navbar3.wide {
+	width: 100%;
+	height: 27px;
+}
+/* background of first level (menu bar) */
+#navbar3.navbar_blue.wide { background: url('../images/navbar3/navbar3-bg-blue.png') left top repeat-x; }
+#navbar3.navbar_red.wide { background: url('../images/navbar3/navbar3-bg-red.png') left top repeat-x; }
+#navbar3.navbar_black.wide { background: url('../images/navbar3/navbar3-bg-black.png') left top repeat-x; }
+#navbar3.navbar_grey.wide { background: url('../images/navbar3/navbar3-bg-grey.png') left top repeat-x; }
+#navbar3.navbar_green.wide { background: url('../images/navbar3/navbar3-bg-green.png') left top repeat-x; }
+#navbar3.navbar_orange.wide { background: url('../images/navbar3/navbar3-bg-orange.png') left top repeat-x; }
+/* hover background of first level */
+#navbar3.navbar_blue.wide #navbar3-menu > li:hover, #navbar3.navbar_blue.wide #navbar3-menu > li.actual { background: url('../images/navbar3/navbar3-menuitem-hover-bg-blue.png') left top repeat-x; }
+#navbar3.navbar_red.wide #navbar3-menu > li:hover, #navbar3.navbar_red.wide #navbar3-menu > li.actual { background: url('../images/navbar3/navbar3-menuitem-hover-bg-red.png') left top repeat-x; }
+#navbar3.navbar_black.wide #navbar3-menu > li:hover, #navbar3.navbar_black.wide #navbar3-menu > li.actual { background: url('../images/navbar3/navbar3-menuitem-hover-bg-black.png') left top repeat-x; }
+#navbar3.navbar_grey.wide #navbar3-menu > li:hover, #navbar3.navbar_grey.wide #navbar3-menu > li.actual { background: url('../images/navbar3/navbar3-menuitem-hover-bg-grey.png') left top repeat-x; }
+#navbar3.navbar_green.wide #navbar3-menu > li:hover, #navbar3.navbar_green.wide #navbar3-menu > li.actual { background: url('../images/navbar3/navbar3-menuitem-hover-bg-green.png') left top repeat-x; }
+#navbar3.navbar_orange.wide #navbar3-menu > li:hover, #navbar3.navbar_orange.wide #navbar3-menu > li.actual { background: url('../images/navbar3/navbar3-menuitem-hover-bg-orange.png') left top repeat-x; }
+/* first level menu (menu bar) */
+#navbar3.wide #navbar3-menu {
+	height: 24px;
+	margin: 0 auto;
+}
+#navbar3.wide #navbar3-menu > li {
+	margin-right: 3px;
+}
+/* -------------------------------------- CORNER part --------------------------------- */
+/* navbar corner container div */
+#navbar3.corner {
+	height: 20px;
+	padding:5px 5px 0 5px;
+}
+#navbar3.corner > span {
+	text-align:center;
+	cursor:default;
+}
+/* background and border of first level (drop down) */
+#navbar3.navbar_blue.corner, #navbar3.navbar_blue.corner #navbar3-menu > li { background: #305f84; }
+#navbar3.navbar_red.corner, #navbar3.navbar_red.corner #navbar3-menu > li { background: #9c383b; }
+#navbar3.navbar_black.corner, #navbar3.navbar_black.corner #navbar3-menu > li { background: #4b4c4c; }
+#navbar3.navbar_grey.corner, #navbar3.navbar_grey.corner #navbar3-menu > li { background: #707172; }
+#navbar3.navbar_green.corner, #navbar3.navbar_green.corner #navbar3-menu > li { background: #409442; }
+#navbar3.navbar_orange.corner, #navbar3.navbar_orange.corner #navbar3-menu > li { background: #de700f; }
+#navbar3.navbar_blue.corner, #navbar3.navbar_blue.corner #navbar3-menu { border: 1px solid #295070; }
+#navbar3.navbar_red.corner, #navbar3.navbar_red.corner #navbar3-menu { border: 1px solid #86282a; }
+#navbar3.navbar_black.corner, #navbar3.navbar_black.corner #navbar3-menu { border: 1px solid #242424; }
+#navbar3.navbar_grey.corner, #navbar3.navbar_grey.corner #navbar3-menu { border: 1px solid #3c3c3c; }
+#navbar3.navbar_green.corner, #navbar3.navbar_green.corner #navbar3-menu { border: 1px solid #24652c; }
+#navbar3.navbar_orange.corner, #navbar3.navbar_orange.corner #navbar3-menu { border: 1px solid #973200; }
+/* hover background of first level */
+#navbar3.navbar_blue.corner #navbar3-menu > li:hover, #navbar3.navbar_blue.corner #navbar3-menu > li.actual { background: #4a7ea1; }
+#navbar3.navbar_red.corner #navbar3-menu > li:hover, #navbar3.navbar_red.corner #navbar3-menu > li.actual { background: #b84648; }
+#navbar3.navbar_black.corner #navbar3-menu > li:hover, #navbar3.navbar_black.corner #navbar3-menu > li.actual { background: #585959; }
+#navbar3.navbar_grey.corner #navbar3-menu > li:hover, #navbar3.navbar_grey.corner #navbar3-menu > li.actual { background: #848586; }
+#navbar3.navbar_green.corner #navbar3-menu > li:hover, #navbar3.navbar_green.corner #navbar3-menu > li.actual { background: #4bae4e; }
+#navbar3.navbar_orange.corner #navbar3-menu > li:hover, #navbar3.navbar_orange.corner #navbar3-menu > li.actual { background: #ff8412; }
+/* first level menu (drop down) */
+#navbar3.corner #navbar3-menu {
+	opacity: 0.95;
+	visibility: hidden;
+	margin: 2px 0 0 0;
+	position: absolute;
+}
+#navbar3.corner:hover #navbar3-menu { visibility: visible; }
+#navbar3.corner #navbar3-menu > li {
+	width:147px;
+}
+#navbar3.corner #navbar3-menu > li ul {
+	width:137px;
+	margin: 0 -9px;
+}
+/* ----------------------- special settings for the different arrangements ----------------------- */
+#navbar3.wide.pos_top #navbar3-menu > li .arrow { background: url('../images/navbar3/arrow-down.png') 0px 2px no-repeat; }
+#navbar3.wide.pos_bottom #navbar3-menu > li .arrow { background: url('../images/navbar3/arrow-up.png') 0px 2px no-repeat; }
+#navbar3.corner.pos_left #navbar3-menu > li .arrow { background: url('../images/navbar3/arrow-right.png') 0px 2px no-repeat; }
+#navbar3.corner.pos_right #navbar3-menu > li .arrow { background: url('../images/navbar3/arrow-left.png') 0px 2px no-repeat; float: left; }
+#navbar3.corner.pos_top > span { background-image: url('../images/navbar3/arrow-down.png'); background-repeat: no-repeat; }
+#navbar3.corner.pos_bottom > span { background-image: url('../images/navbar3/arrow-up.png'); background-repeat: no-repeat; }
+#navbar3.corner.pos_left > span { padding-right:18px; background-position: right 2px; }
+#navbar3.corner.pos_right > span { padding-left:16px; background-position: left 2px; }
